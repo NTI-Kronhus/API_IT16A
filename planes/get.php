@@ -29,25 +29,23 @@ else{ // SEARCH ALL PLANES
     $result = mysqli_query($dbc,$query);
     
     echo '{"planes":[';
+    
     $row = mysqli_fetch_array($result);
     while($row){
+
         $id = $row['id'];
         $name = $row['name'];
         $capacity = $row['capacity'];
         
-        echo '{';
-        echo '"id":'.$id;
-        echo ',"name":"'.$name.'"';
-        echo ',"capacity":'.$capacity;
-        echo '}';
-        if($row = mysqli_fetch_array($result)){
+        echo "{\"id\":\"$id\",\"name\":\"$name\",\"capacity\":\"$capacity\" }";
+
+        if($row = mysqli_fetch_array($result)){ // HAS MORE ROWS
             echo ",";
         }
     }
     
     echo "]}";
-    
-   
+        
 }
 
 ?>
