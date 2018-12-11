@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <script>
+    
+        $(document).ready(function(){
+            $("#planes").click( function(){
+            $.ajax({
+                url: "/api/planes/new.php",
+                data: {name:"PLANE X2000",capacity:10},
+                success: function(result){
+                    console.log(result);
+                },
+                method:"POST"
+                });
+            
+            });
+            
+            $("#passengers").click( function(){
+            $.ajax({
+                url: "/api/passengers/new.php",
+                data: {name:"Joakim",passport_number:prompt("PASSPORT?"),birth:"1995-04-25"},
+                success: function(result){
+                    console.log(result);
+                },
+                method:"POST"
+                });
+            
+            });
+            
+            $("#flights").click( function(){
+            $.ajax({
+                url: "/api/flights/new.php",
+                data: {plane_id:prompt("PLANE?"),departure:"12:30",arrival:"17:45",from_city:"Götborg",to_city:"Egypten",distance:5000,flight_number:prompt("FLIGHT NUMBER?")},
+                success: function(result){
+                    console.log(result);
+                },
+                method:"POST"
+                });
+            
+            });
+        });
+    
+    </script>
+</head>
+<body>
+    
+    <button id="planes"> NYTT PLAN </button>
+    <button id="passengers"> NY PASSAGERARE </button>
+    <button id="flights"> NYTT FLIGHT </button>
+    
+</body>
+</html>
