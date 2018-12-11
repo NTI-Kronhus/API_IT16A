@@ -16,13 +16,14 @@ CREATE TABLE flights(
     arrival varchar(32),
     from_city varchar(32),
     to_city varchar(32),
-    distance int(8)	
+    distance int(8),
+    flight_number varchar(32) UNIQUE
 );
 
 CREATE TABLE passengers(
     id int(8) PRIMARY KEY AUTO_INCREMENT,
     name varchar(32),
-    passport_number varchar(32),
+    passport_number varchar(32) UNIQUE,
     birth varchar(32)	
 );
 
