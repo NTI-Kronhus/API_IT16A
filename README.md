@@ -11,6 +11,7 @@ Basic:
 Lite svårare:
 * Kunna hämta alla flights. (Med plan, tider, destinationer, alla passagerare)
 * Man ska inte kunna koppla fler passagerare än vad planet rymmer.
+* Man ska inte kunna koppla ett plan till två flights samtidigt.
 * En passagerare ska inte kunna ha två flights som går samtidigt. (Bara kunna åka ett plan samtidigt)
 
 
