@@ -3,8 +3,8 @@
 ### ATT GÖRA:
 
 Basic:
-* Kunna skapa nya passengers.
-* Kunna skapa nya flights.
+* Kunna hämta alla eller en specifika passengers.
+* Kunna hämta alla eller en specifika flights.
 * Kunna koppla ett plan till ett flight.
 * Kunna koppla en passagerare till ett flight.
 
